@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  color:white
+}
+
+header {
+    background-image: url('/images/bg3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    color:white
+}
+
