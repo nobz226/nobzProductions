@@ -7,7 +7,7 @@
     </head>
     <body background="images/bg3.png" text="white">
         <header>
-            <h1>Welcome to Nobz Productions</h1>
+            <h1>Nobz Productions</h1>
             <nav>
                 <ul>
                     <li style="display: inline; margin-right: 20px;"><a href="#about">About</a></li>
@@ -21,45 +21,81 @@
         </header>
 
         <main>
-            <section id="about">
-                <h2>About</h2>
-                <img src="/images/edd.png" width="100">
-                <p>My mission...</p>
+            <section id="intro">
+                <h2>Welcome to my cozy digital studio</h2>
+                <p>Here you will find a collection of digital creation works, ranging from hip hop inspired beats, 
+                    instrumentals and remixes, urban photography,<br>graphic design and other cool things that I have
+                    created over time. All of this content was made out of pure love for the mediums they represent.<br>
+                    I hope you enjoy browsing through my creations just as much as I enjoyed making them. Have fun
+                    and thanks for visiting.</p>
             </section>
 
+
             <section id="beats">
-                <h2>Latest Beats</h2>
-                <p>Checkout a carefully selected playlist of beats and instrumentals.</p>
+                <h3>Beats, Remixes and Instrumentals</h3>
+                <p>Explore my collection of original beats and remixes. Each track represents a unique blend of styles 
+                    and influences, from classic boom-bap to metal,<br>dub and more.</p>
                     <a href="/beats.html">Explore playlist</a>
             </section>
 
             <section id="albums">
-                <h2>Album Art</h2>
+                <h3>Album Art</h3>
                 <p>A selection of album artwork</p>
                     <a href="/albums.html">See album art</a>
             </section>
 
             <section id="photo">
-                <h2>Photography</h2>
+                <h3>Photography</h3>
                 <p>A collection of urban photography pieces</p>
                     <a href="/photos.html">Enter photo gallery</a>
             </section>
 
             <section id="design">
-                <h2>Graphic Design</h2>
+                <h3>Graphic Design</h3>
                 <p>Moodboards and graphics</p>
                 <a href="/design.html">Browse through compositions</a>
             </section>
 
+            <section id="about">
+                <h3>Behind the scenes</h3>
+                <p>Find out more about who is behind Nobz Productions and why.</p>
+                <a href="/about.html">See more</a>
+            </section>
+
             <section id="contact">
-                <h2>Contact Me</h2>
+                <h3>Contact Me</h3>
                 <p>Let's get in touch and talk or do something cool.</p>
-                <form></form>
+                <form action="/submit" method="POST">
+                   
+                        <legend>Contact Information</legend>
+
+                        <p>
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </p>
+
+                        <p>
+                            <label for="email">Email Adress:</label>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+
+                        <p>
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </p>
+
+                        <p>
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" rows="8" required></textarea>
+                        </p>
+
+                        <button type="submit">Send Message</button>
+                </form>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2025 My Beats Website. All rights reserved</p>
+            <p>&copy; 2025 Nobz Productions. All rights reserved</p>
         </footer>
     </body>
 </html>
