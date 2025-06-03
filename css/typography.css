@@ -57,6 +57,7 @@ a { color: azure;
     font-family: var(--font-primary);
     font-weight: var(--weight-bold);
     line-height: var(--line-height-tight);
+    font-size: var(--font-size-lg);
     margin-top: 0;
     margin-bottom: 0.5em;
     text-decoration: none;
@@ -94,8 +95,4 @@ h2 {
 h3 {
     font-size: var(--font-size-xl);
     color:dimgrey;
-}
-
-a {
-    font-size: var(--font-size-lg);
 }
