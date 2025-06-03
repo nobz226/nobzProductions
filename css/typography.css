@@ -67,11 +67,17 @@ a:hover {
     transition: color 0.3s ease;
 }
 
+#accent-word {
+    color: rgb(167, 39, 39);
+}
+
 h1 {
+    font-family: var(--font-primary);
     font-size: 3rem;
     letter-spacing: var(--letter-spacing-tight);
+    font-weight: var(--weight-black);
 }
-/* Headings */
+
 h2, h3 {
     font-family: var(--font-primary);
     font-weight: var(--weight-bold);
