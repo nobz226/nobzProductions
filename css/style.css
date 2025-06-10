@@ -103,6 +103,8 @@ main {
   padding: 30px;
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0);
+  z-index: 10000;
+  isolation: isolate;
 }
 
 #intro, #beatsIntro, #photoIntro, #designIntro, #albumsIntro {
@@ -119,6 +121,99 @@ main {
   padding: 30px;
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0);
+  z-index: 10000;
+  isolation: isolate;
+  
+}
+
+:root {
+  --crt-intensity: 5;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, calc(0.15 * var(--crt-intensity))),
+    rgba(0, 0, 0, calc(0.15 * var(--crt-intensity))) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  animation: flicker 2s infinite;
+  mix-blend-mode: overlay;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.crt-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-right: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 15px;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.crt-controls label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.crt-slider {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 120px;
+  height: 3px;
+  background: #333;
+  outline: none;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.crt-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.crt-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.crt-slider:hover::-webkit-slider-thumb {
+  background: #333;
+  border-color: white;
+}
+
+.crt-slider:hover::-moz-range-thumb {
+  background: #333;
+  border-color: white;
 }
 
 

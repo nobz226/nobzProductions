@@ -68,15 +68,23 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-#accent-word {
-    color: rgb(167, 39, 39);
+/* Update the animations */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
-
+    
 h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
     letter-spacing: var(--letter-spacing-tight);
     font-weight: var(--weight-black);
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 6s steps(100, end) forwards;
+    animation-delay: 0s;
 }
 
 h2, h3 {
@@ -95,4 +103,14 @@ h2 {
 h3 {
     font-size: var(--font-size-xl);
     color:dimgrey;
+}
+
+#accent-word {
+    color: rgb(167, 39, 39);
+    display: inline-block;
+}
+
+.crt-controls label {
+    font-family: var(--font-primary);
+    color: rgb(167,39, 39);
 }

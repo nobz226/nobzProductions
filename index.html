@@ -11,7 +11,7 @@
     <body>
         <header>
             <a href="#intro" id="mainTitle" style="text-decoration: none;">
-            <h1>Nobz<span id="accent-word">Productions</span></h1>
+                <h1>Nobz<span id="accent-word">Productions</span></h1>
             </a>
             <nav>
                 <ul> 
@@ -23,6 +23,19 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            
+            <div class="crt-controls">
+                <label for="crtIntensity">CRT Effect: </label>
+                <input 
+                    type="range" 
+                    id="crtIntensity" 
+                    class="crt-slider"
+                    min="0" 
+                    max="1" 
+                    step="0.1" 
+                    value="0.5"
+                >
+            </div>
         </header>
 
         <main>
@@ -100,6 +113,13 @@
                         <button type="submit">Send Message</button>
                 </form>
             </section>
+
+            <script>
+              const slider = document.getElementById('crtIntensity');
+              slider.addEventListener('input', (e) => {
+                document.documentElement.style.setProperty('--crt-intensity', e.target.value);
+              });
+            </script>
         </main>
 
         <footer>
