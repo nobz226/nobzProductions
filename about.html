@@ -1,55 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- html opening tag with values for language and inline css styling
+for scrolling behavior-->
+<html lang="en" style="scroll-behavior: smooth">
+  <!--Code for the head meta data and links to css files-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/typography.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+  </head>
+
+  <body>
+    <!--Header code containing a link in the title, and a navigation element with 
+    a unordered list of links to the homepage and other sections of it-->
     <header>
-        <a href="#about2" id="aboutTitle" style="text-decoration: none;">
-        <h1>About</h1>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#beats">Beats</a></li>
-                <li><a href="/index.html#albums">Album Art</a></li>
-                <li><a href="/index.html#photo">Photography</a></li>
-                <li><a href="/index.html#design">Graphic Design</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="#about2" id="aboutTitle" style="text-decoration: none">
+        <h1>About</h1></a>
+
+      <nav aria-label="Main navigation" role="navigation">
+        <ul aria-label="Main menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#beats">Beats</a></li>
+          <li><a href="/index.html#albums">Album Art</a></li>
+          <li><a href="/index.html#photo">Photography</a></li>
+          <li><a href="/index.html#design">Graphic Design</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
+    <!--Code for the main content, with a section that contains an article with h2 
+    and h3 titles, text paragraphs and the paths to the images used on the page-->
     <main>
-        <section id="about2">
-            <article>
-                <h2>Who is Nobz Productions?</h2>
-                <img src="/images/edd.png" width="100" alt="A photo of Nobz">
-                <h3>What started it all?</h3>
-                    <p>The idea of creating something cool and beautiful with my computer stems from my love of urban
-                        culture and all of it's many branches, graffiti, hip-hop, extreme sports, underground bands, nu-metal and 
-                        all the fashion and aesthetics that come with it. I first fell in love with computers and then discovered 
-                        a whole new world through skateboarding and music.</p>
-                     
-                    <p>I wanted to give so much back to these worlds and 25 years later, I still hold the same love for all of those things. 
-                        In 2019 I started my digital creative identity by making hip hop beats and today I am dabbling in photography, 
-                        web development, graphic design and so much more.</p>
-                     
-                <h3>Mission</h3>
-                    <p>My goal is to provide inspiration for digital creatives and music creators while sharing my own journey
-                        through beatmaking, photography and graphic design. Whether you're a beginner looking to learn photography, an MC or
-                        DJ needing a quick beat, or just someone who loves urban art, I hope you find something here to help enhance your 
-                        experience. - Eddie (Nobz)</p>
-            </article>           
-        </section>
+      <section id="about2">
+        <article>
+          <h2>Who is Nobz Productions?</h2>
+          <img src="/images/edd.png" width="100" alt="A photo of Nobz" />
+          <h3>What started it all?</h3>
+          <p>
+            The idea of creating something cool and beautiful with my computer
+            stems from my love of urban culture and all of it's many branches,
+            graffiti, hip-hop, extreme sports, underground bands, nu-metal and
+            all the fashion and aesthetics that come with it. I first fell in
+            love with computers and then discovered a whole new world through
+            skateboarding and music.
+          </p>
+
+          <p>
+            I wanted to give so much back to these worlds and 25 years later, I
+            still hold the same love for all of those things. In 2019 I started
+            my digital creative identity by making hip hop beats and today I am
+            dabbling in photography, web development, graphic design and so much
+            more.
+          </p>
+
+          <h3>Mission</h3>
+          <p>
+            My goal is to provide inspiration for digital creatives and music
+            creators while sharing my own journey through beatmaking,
+            photography and graphic design. Whether you're a beginner looking to
+            learn photography, an MC or DJ needing a quick beat, or just someone
+            who loves urban art, I hope you find something here to help enhance
+            your experience. - Eddie (Nobz)
+          </p>
+        </article>
+      </section>
     </main>
 
+    <!--Code for the footer-->
     <footer>
-            <p>&copy; 2025 Nobz Productions. All rights reserved</p>
+      <p>&copy; 2025 Nobz Productions. All rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>

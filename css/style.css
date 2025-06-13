@@ -1,7 +1,9 @@
+/* Root variables for the crt effect */
 :root {
   --crt-intensity: 2;
 }
 
+/* Global body styles and background gradient */
 body {
   overflow-x: hidden;
   overscroll-behavior: none;
@@ -11,6 +13,7 @@ body {
   margin: 0;
 }
 
+/* CRT screen effect overlay */
 body::before {
   content: "";
   position: fixed;
@@ -31,6 +34,7 @@ body::before {
   mix-blend-mode: overlay;
 }
 
+/* Header styles with background image */
 header {
   border: 0.5px solid #333;
   background-image: url("/images/bg3.png");
@@ -50,6 +54,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* CRT effect for header */
 header::before {
   content: "";
   position: absolute;
@@ -69,6 +74,7 @@ header::before {
   mix-blend-mode: overlay;
 }
 
+/* Footer styles */
 footer {
   border: 0.5px solid #333;
   background-color: black;
@@ -81,12 +87,14 @@ footer {
   margin-top: 10px;
 }
 
+/* Navigation list items */
 li {
   display: inline;
   margin-right: 20px;
   padding-top: 15px;
 }
 
+/* Content section styles with fade-in animation */
 section {
   position: relative;
   max-width: 100%;
@@ -101,6 +109,7 @@ section {
   animation: fadeInUp 2s ease forwards;
 }
 
+/* Main content container */
 main {
   display: flex;
   flex-direction: column;
@@ -109,6 +118,7 @@ main {
   padding-top: 200px;
 }
 
+/* Button link styles */
 .button-link {
   display: inline-block;
   padding: 10px 20px;
@@ -124,6 +134,7 @@ main {
   box-sizing: border-box;
 }
 
+/* Button hover effects */
 .button-link:hover {
   background-color: #333;
   color: white;
@@ -131,6 +142,7 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Disable hover effects for title elements */
 #mainTitle:hover, #photoTitle:hover, 
 #designTitle:hover, #beatsTitle:hover, 
 #albumTitle:hover, #aboutTitle:hover {
@@ -138,6 +150,7 @@ main {
   transition: none;
 }
 
+/* Playlist container styles */
 #playlist {
   position: relative;
   max-width: 100%;
@@ -150,11 +163,13 @@ main {
   
 }
 
+/* Remove borders and shadows for intro sections */
 #intro, #beatsIntro, #photoIntro, #designIntro, #albumsIntro {
   border: none;
   box-shadow: none;
 }
 
+/* Gallery container styles */
 #albumGallery, #photoGallery, #designGallery {
   position: relative;
   max-width: 100%;
@@ -168,6 +183,7 @@ main {
   
 }
 
+/* Animation keyframes */
 @keyframes fadeInUp {
   0% {
     opacity: 0;

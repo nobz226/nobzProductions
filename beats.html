@@ -1,70 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- html opening tag with values for language and inline css styling
+ for scrolling behavior-->
+<html lang="en" style="scroll-behavior: smooth">
+  <!--Code for the head meta data and links to css files-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beats and Remixes</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/typography.css">
-</head>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+  </head>
 
-<body>
+  <body>
+    <!--Header code containing a link in the title, a span for word coloring and 
+     a navigation element with a unordered list of links to the homepage and other
+    sections of it-->
     <header>
-        <a href="#beatsIntro" id="beatsTitle" style="text-decoration: none;">
-        <h1>Beats<span id="accent-word">Remixes</span></h1>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#albums">Album Art</a></li>
-                <li><a href="/index.html#photo">Photography</a></li>
-                <li><a href="/index.html#design">Graphic Design</a></li>
-                <li><a href="/index.html#about">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-        </nav>        
+      <a href="#beatsIntro" id="beatsTitle" style="text-decoration: none">
+        <h1>Beats<span id="accent-word">Remixes</span></h1></a>
+
+      <nav aria-label="Main navigation" role="navigation">
+        <ul aria-label="Main menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#albums">Album Art</a></li>
+          <li><a href="/index.html#photo">Photography</a></li>
+          <li><a href="/index.html#design">Graphic Design</a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
+    <!--Code for the main content, with a paragraph intro section and a playlist section
+    with paths to the audio used in it-->
     <main>
-        <section id="beatsIntro">
-            <h2>Explore a curated playlist of home made beats and remixes</h2>
-            <p>This is a selection of beats from my journey through beatmaking and music production.
-                These tracks were made using a combination of MIDI, real live played and recorded instruments,
-                sample chops and turntablism.
-                Everything was done with Native Instruments Maschine, Ableton and the trusty Technics SL-1200. Shout out to
-                all the companies making these amazing tools.
-            </p>
-        </section>
+      <section id="beatsIntro">
+        <h2>Explore a curated playlist of home made beats and remixes</h2>
+        <p>
+          This is a selection of beats from my journey through beatmaking and
+          music production. These tracks were made using a combination of MIDI,
+          real live played and recorded instruments, sample chops and
+          turntablism. Everything was done with Native Instruments Maschine,
+          Ableton and the trusty Technics SL-1200. Shout out to all the
+          companies making these amazing tools.
+        </p>
+      </section>
 
-        <section id="playlist">
-            <h3>Playlist</h3>
+      <section id="playlist">
+        <h3>Playlist</h3>
 
-            <article id="track1">
-                <h4>My show</h4>
-                <audio controls>
-                    <source src="audio/myShow.mp3" type="audio/mpeg" alt="MyShow Audio Track">
-                </audio>
-            </article>
+        <article id="track1">
+          <h4>My show</h4>
+          <audio controls>
+            <source
+              src="audio/myShow.mp3"
+              type="audio/mpeg"
+              alt="MyShow Audio Track"
+            />
+          </audio>
+        </article>
 
-            <article id="track2">
-                <h4>B0B</h4>
-                <audio controls>
-                    <source src="audio/B0B.mp3" type="audio/mpeg" alt="B0B Audio Track">
-                </audio>
-            </article>
+        <article id="track2">
+          <h4>B0B</h4>
+          <audio controls>
+            <source
+              src="audio/B0B.mp3"
+              type="audio/mpeg"
+              alt="B0B Audio Track"
+            />
+          </audio>
+        </article>
 
-            <article id="track3">
-                <h4>Untitled Still...(Nerub Edit)</h4>
-                <audio controls>
-                    <source src="audio/Untitled Still...(Nerub Edit).mp3" type="audio/mpeg" alt="Untitled Still Audio Track">
-                </audio>
-            </article>
-
-        </section>
+        <article id="track3">
+          <h4>Untitled Still...(Nerub Edit)</h4>
+          <audio controls>
+            <source
+              src="audio/Untitled Still...(Nerub Edit).mp3"
+              type="audio/mpeg"
+              alt="Untitled Still Audio Track"
+            />
+          </audio>
+        </article>
+      </section>
     </main>
 
+    <!--Code for the footer-->
     <footer>
-            <p>&copy; 2025 Nobz Productions. All rights reserved</p>
+      <p>&copy; 2025 Nobz Productions. All rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>

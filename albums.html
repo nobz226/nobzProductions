@@ -1,47 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- html opening tag with values for language and inline css styling
+for scrolling behavior-->
+<html lang="en" style="scroll-behavior: smooth">
+  <!--Code for the head meta data and links to css files-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Album Art</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/typography.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+  </head>
+
+  <body>
+    <!--Header code containing a link in the title, a span for word coloring and 
+    a navigation element with a unordered list of links to the homepage and other
+    sections of it-->
     <header>
-        <a href="#albumsIntro" id="albumTitle" style="text-decoration: none;">
-        <h1>Album<span id="accent-word">Art</span></h1>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#beats">Beats</a></li>
-                <li><a href="/index.html#photo">Photography</a></li>
-                <li><a href="/index.html#design">Graphic Design</a></li>
-                <li><a href="/index.html#about">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="#albumsIntro" id="albumTitle" style="text-decoration: none">
+        <h1>Album<span id="accent-word">Art</span></h1></a>
+
+      <nav aria-label="Main navigation" role="navigation">
+        <ul aria-label="Main menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#beats">Beats</a></li>
+          <li><a href="/index.html#photo">Photography</a></li>
+          <li><a href="/index.html#design">Graphic Design</a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
+    <!--Code for the main content, with a paragraph intro section and a photo gallery section
+    that contains the paths to the images used on the page-->
     <main>
-        <section id="albumsIntro">
-            <h2>Enjoy a gallery of album art compositions</h2>
-            <p>These album covers were made using real photos in Vancouver BC, taken by Nobz and graphics by Syhis.
-                The compositions were put together using the power of Adobe Photoshop and a lot of trial and error.
-            </p>
-        </section>
-        
-        <section id="albumGallery">
-            <div class="albums">
-            <img src="/images/FrontCover.png" width="350" alt="Trust Your Own Front Cover">
-            <img src="/images/BackCover.png" width="350" alt="Trust Your Own Back Cover">
-            </div>
-        </section>
+      <section id="albumsIntro">
+        <h2>Enjoy a gallery of album art compositions</h2>
+        <p>
+          These album covers were made using real photos in Vancouver BC, taken
+          by Nobz and graphics by Syhis. The compositions were put together
+          using the power of Adobe Photoshop and a lot of trial and error.
+        </p>
+      </section>
+
+      <section id="albumGallery">
+        <div class="albums">
+          <img
+            src="/images/FrontCover.png"
+            width="350"
+            alt="Trust Your Own Front Cover"
+          />
+          <img
+            src="/images/BackCover.png"
+            width="350"
+            alt="Trust Your Own Back Cover"
+          />
+        </div>
+      </section>
     </main>
 
+    <!--Code for the footer-->
     <footer>
-            <p>&copy; 2025 Nobz Productions. All rights reserved</p>
+      <p>&copy; 2025 Nobz Productions. All rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>

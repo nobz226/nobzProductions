@@ -1,51 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/typography.css">
-</head>
-<body>
-    <header>
-        <a href="#photoIntro" id="photoTitle" style="text-decoration: none;">
-        <h1>Photo<span id="accent-word">Gallery</span></h1>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#beats">Beats</a></li>
-                <li><a href="/index.html#albums">Album Art</a></li>
-                <li><a href="/index.html#design">Graphic Design</a></li>
-                <li><a href="/index.html#about">About</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="photoIntro">
-            <h2>Urban photography straight from Metro Vancouver</h2>
-            <p>The photographs in this gallery were taken using a Sony ZV-E10, full manual mode, in Vancouver BC. I tried capturing the beauty and the grit of Vancouver streets
-                My goal is to catch aesthetic things that we normally walk past without really noticing when rushing around through the cityscape.</p>
-        </section>
 
-        <section id="photoGallery">
-            <div class=photos>
-            <img src="/images/train.jpeg" width="350" alt="Photo of a train">
-            <img src="/images/train2.JPG" width="350" alt="Photo of train 2">
-            <img src="/images/bridge.JPG" width="350" alt="Photo of a bridge">
-            <img src="/images/car.JPG" width="350" alt="Photo of a car">
-            <img src="/images/wall.jpeg" width="350" alt="Photo of a wall">
-            <img src="/images/icon.jpeg" width="350" alt="Photo of a sticker">
-            <img src="/images/bridge2.JPEG" width="350" alt="Photo of bridge 2">
-            </div>
-        </section>
+<!-- html opening tag with values for language and inline css styling
+ for scrolling behavior-->
+<html lang="en" style="scroll-behavior: smooth">
+  <!--Code for the head meta data and links to css files-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+  </head>
+
+  <body>
+    <!--Header code containing a link in the title, a span for word coloring and 
+     a navigation element with a unordered list of links to the homepage and other
+    sections of it-->
+    <header>
+      <a href="#photoIntro" id="photoTitle" style="text-decoration: none">
+        <h1>Photo<span id="accent-word">Gallery</span></h1></a>
+
+      <nav aria-label="Main navigation" role="navigation">
+        <ul aria-label="Main menu">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#beats">Beats</a></li>
+          <li><a href="/index.html#albums">Album Art</a></li>
+          <li><a href="/index.html#design">Graphic Design</a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Code for the main content, with a paragraph intro section and a photo gallery section
+    that contains h2 titles, text paragraphs and the paths to the images used on the page-->
+    <main>
+      <section id="photoIntro">
+        <h2>Urban photography straight from Metro Vancouver</h2>
+        <p>
+          The photographs in this gallery were taken using a Sony ZV-E10, full
+          manual mode, in Vancouver BC. I tried capturing the beauty and the
+          grit of Vancouver streets My goal is to catch aesthetic things that we
+          normally walk past without really noticing when rushing around through
+          the cityscape.
+        </p>
+      </section>
+
+      <section id="photoGallery">
+        <div class="photos">
+          <img src="/images/train.jpeg" width="350" alt="Photo of a train" />
+          <img src="/images/train2.JPG" width="350" alt="Photo of train 2" />
+          <img src="/images/bridge.JPG" width="350" alt="Photo of a bridge" />
+          <img src="/images/car.JPG" width="350" alt="Photo of a car" />
+          <img src="/images/wall.jpeg" width="350" alt="Photo of a wall" />
+          <img src="/images/icon.jpeg" width="350" alt="Photo of a sticker" />
+          <img src="/images/bridge2.JPEG" width="350" alt="Photo of bridge 2" />
+        </div>
+      </section>
     </main>
 
+    <!--Code for the footer-->
     <footer>
-            <p>&copy; 2025 Nobz Productions. All rights reserved</p>
+      <p>&copy; 2025 Nobz Productions. All rights reserved</p>
     </footer>
-</body>
+  </body>
 </html>
