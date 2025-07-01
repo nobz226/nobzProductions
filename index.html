@@ -22,11 +22,13 @@
 
       <nav aria-label="Main navigation" role="navigation">
         <ul aria-label="Main menu">
-          <li><a href="#beats">Beats</a></li>
-          <li><a href="#albums">Album Art</a></li>
-          <li><a href="#photo">Photography</a></li>
-          <li><a href="#design">Graphic Design</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="beats.html">Beats</a></li>
+          <li><a href="albums.html">Album Art</a></li>
+          <li><a href="photos.html">Photography</a></li>
+          <li><a href="webDesign.html">Web Design</a></li>
+          <li><a href="design.html">Graphic Design</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -35,108 +37,95 @@
     <!--Code for the main content, with a paragraph intro section and sections
         for each page of the website, complete with image paths and buttons with links to each page-->
     <main>
-      <section id="intro">
-        <h2>Welcome to my vault of digital creations!</h2>
-        <p>
-          Here you will find a collection urban art works, ranging from hip hop
-          inspired beats, instrumentals and remixes to urban photography,
-          graphic design and other cool things that I have created over time.
-          All of this content was made out of pure love for the mediums they
-          represent. I hope you enjoy browsing through my creations just as much
-          as I enjoyed making them. Have fun and thanks for visiting.
-        </p>
-      </section>
-
-      <section id="beats">
-        <h3>Beats, Remixes and Instrumentals</h3>
-        <img
-          src="https://s11234.pcdn.co/wp-content/uploads/2018/02/mpc-6.jpg"
-          width="350"
-          alt="An animated gif of an MPC"
-        />
-        <p>
-          Explore a collection of original beats and remixes. Each track
-          represents a unique blend of styles and influences, from classic
-          boom-bap to metal, dub and more.
-        </p>
-        <a href="/beats.html" class="button-link">Explore playlist</a>
-      </section>
-
-      <section id="albums">
-        <h3>Album Art</h3>
-        <img
-          src="https://www.udiscovermusic.com/wp-content/uploads/2015/10/100-Greatest-Album-Covers-1000x600.jpg"
-          width="350"
-          alt="An animated gif of an album cover"
-        />
-        <p>
-          A gallery of album artwork made with real photographs and hand drawn
-          graphics
-        </p>
-        <a href="/albums.html" class="button-link">See album art</a>
-      </section>
-
-      <section id="photo">
-        <h3>Photography</h3>
-        <img
-          src="https://www.nousngo.eu/wp-content/uploads/2019/05/photographer-website-design-91250317.jpg"
-          width="350"
-          alt="An animated gif of a camera"
-        />
-        <p>
-          A collection of urban photography pieces that were captured raw, on
-          the streets of Vancouver.
-        </p>
-        <a href="/photos.html" class="button-link">Enter photo gallery</a>
-      </section>
-
-      <section id="design">
-        <h3>Graphic Design</h3>
-        <img
-          src="https://www.shutterstock.com/image-vector/graffiti-slogan-print-neon-spray-260nw-2412086659.jpg"
-          width="350"
-          alt="An animated gif of a logo"
-        />
-        <p>Moodboards and graphics</p>
-        <a href="/design.html" class="button-link">Browse compositions</a>
-      </section>
-
-      <section id="about">
-        <h3>Behind the scenes</h3>
-        <p>Find out more about who is behind Nobz Productions and why.</p>
-        <a href="/about.html" class="button-link">See more</a>
-      </section>
-
-      <!--Code for the contact form with a POST method button, legend, labels and input fields-->
-      <section id="contact">
-        <h3>Contact Me</h3>
-        <p>Let's get in touch and talk or do something cool.</p>
-        <form action="/submit" method="POST">
-          <legend>Contact Information</legend>
-
-          <p>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required />
+      <div class="introCard">
+        <div class="introContent">
+          <h2 class="introTitle">Welcome to my vault of digital creations!</h2>
+          <p class="introContent">
+            Here you will find a collection urban art works, ranging from hip hop
+            inspired beats, instrumentals and remixes to urban photography,
+            graphic design and other cool things that I have created over time.
+            All of this content was made out of pure love for the mediums they
+            represent. I hope you enjoy browsing through my creations just as much
+            as I enjoyed making them. Have fun and thanks for visiting.
           </p>
+        </div>
+      </div>
 
-          <p>
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required />
+      <div class="card">
+        <img src="https://s11234.pcdn.co/wp-content/uploads/2018/02/mpc-6.jpg" alt="An animated gif of an MPC"/>
+        <div class="cardContent">
+          <h3 class="cardTitle">Beats, Remixes and Instrumentals</h3>
+          <p class="cardDescription">Explore a collection of original beats and remixes. Each track
+            represents a unique blend of styles and influences.
           </p>
+          <a href="/beats.html" class="button-link">Explore playlist</a>
+        </div>
+      </div>
 
-          <p>
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required />
-          </p>
+      <div class="card">
+        <img src="https://www.udiscovermusic.com/wp-content/uploads/2015/10/100-Greatest-Album-Covers-1000x600.jpg" alt="An animated gif of an album cover"/>
+        <div class="cardContent">
+          <h3 class="cardTitle">Album Art</h3>
+          <p class="cardDescription">A gallery of album artwork made with real photographs and hand drawn
+            graphics</p>
+          <a href="/albums.html" class="button-link">See album art</a>
+        </div>
+      </div>
 
-          <p>
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="8" required></textarea>
-          </p>
+      <div class="card">
+        <img src="https://www.nousngo.eu/wp-content/uploads/2019/05/photographer-website-design-91250317.jpg" alt="An animated gif of a camera"/>
+        <div class="cardContent">
+          <h3 class="cardTitle">Photography</h3>
+          <p class="cardDescription">A collection of urban photography pieces that were captured raw, on
+            the streets of Vancouver.</p>
+          <a href="/photos.html" class="button-link">Enter photo gallery</a>
+        </div>
+      </div>  
 
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+      <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/graffiti-slogan-print-neon-spray-260nw-2412086659.jpg" alt="An animated gif of a logo"/>
+        <div class="cardContent">
+          <h3 class="cardTitle">Graphic Design</h3>
+          <p class="cardDescription">Graphics, logos, moodboards made with Photoshop</p>
+          <a href="/design.html" class="button-link">Browse compositions</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://t4.ftcdn.net/jpg/07/78/57/83/360_F_778578390_RD4KIJjcAZJfpJGcvRPMHPi025m5ZFbW.jpg" alt="An animated gif of a logo"/>
+        <div class="cardContent">
+          <h3 class="cardTitle">Behind the scenes</h3>
+          <p class="cardDescription">Find out more about who is behind Nobz Productions and why.</p>
+          <a href="/about.html" class="button-link">See more</a>
+        </div>
+      </div>
+
+      <div class="form" id="contact">
+        <div class="formContent">
+          <h3 class="formTitle">Contact Me</h3>
+          <p class="formDescription">Let's get in touch and talk or do something cool.</p>
+          <form action="/submit" method="POST">
+            <legend>Contact Information</legend>
+            <p>
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required />
+            </p>
+            <p>
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required />
+            </p>
+            <p>
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required />
+            </p>
+            <p>
+              <label for="message">Your Message:</label>
+              <textarea id="message" name="message" rows="8" required></textarea>
+            </p>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <!--Code for the footer-->

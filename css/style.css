@@ -5,9 +5,14 @@
 
 /* Global body styles and background gradient */
 body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   overflow-x: hidden;
   overscroll-behavior: none;
-  background: linear-gradient(45deg, #000000e3 75%, #330000 100%);
+  background: linear-gradient(45deg, #000000e3 75%, #330e00 100%);
   min-height: 100vh;
   color: white;
   margin: 0;
@@ -36,7 +41,6 @@ body::before {
 
 /* Header styles with background image */
 header {
-  border: 0.5px solid #333;
   background-image: url("/images/bg3.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,10 +49,10 @@ header {
   color: white;
   padding: 20px;
   max-height: 150px;
-  display: flex;
-  flex-direction: column;
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
   justify-content: center;
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 3;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -74,15 +78,18 @@ header::before {
   mix-blend-mode: overlay;
 }
 
+.introCard {
+  grid-column: 1 / -1;
+}
+
 /* Footer styles */
 footer {
   border: 0.5px solid #333;
   background-color: black;
   padding: 30px 20px;
   min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  grid-column: 1 / 6;
+  grid-row: 3 / 4;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   margin-top: 10px;
 }
@@ -94,28 +101,83 @@ li {
   padding-top: 15px;
 }
 
-/* Content section styles with fade-in animation */
-section {
+.form {
+  border-top: 0.5px solid #333;
+  padding: 20px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+
+.card {
+  min-height: 200px;
   position: relative;
-  max-width: 100%;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;  
   border: 1px solid #333;
   border-radius: 10px;
   padding: 30px;
-  scroll-margin-top: 210px;
   margin: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation: fadeInUp 2s ease forwards;
 }
 
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.cardTitle {
+  height: 2.5em;  
+  margin: 0 0 0.2rem 0;
+  overflow: hidden; 
+  text-align: left;
+}
+
+.cardDescription {
+  height: 5em; 
+  margin: 0 0 1rem 0;
+  overflow: hidden;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.button-link {
+  width: 100%;
+  max-width: 250px;
+  align-self: center;
+  margin-top: auto;
+}
+
+
+
 /* Main content container */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
+  grid-column: 1 / 6;
+  grid-row: 2 / 3;
+  align-items: stretch;
   width: 100%;
-  padding-top: 200px;
+  padding-top: 20px;
+  margin: 0;
 }
 
 /* Button link styles */
@@ -161,6 +223,21 @@ main {
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0);
 }
+
+.introCard {
+  border: none;
+  box-shadow: none;
+  position: relative;
+  max-width: 100%;
+  width: 80%;
+  padding: 30px;
+  margin: 10px;
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+
+}
+
+
 
 /* Remove borders and shadows for intro sections */
 #intro, #beatsIntro, #photoIntro, #designIntro, #albumsIntro {
