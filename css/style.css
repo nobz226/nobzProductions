@@ -12,13 +12,13 @@ body {
   grid-row-gap: 0px;
   overflow-x: hidden;
   overscroll-behavior: none;
-  background: linear-gradient(45deg, #000000e3 75%, #222222 100%);
+  background: linear-gradient(45deg, #000000e3 75%, #414141 100%);
   min-height: 100vh;
   margin: 0;
   color:azure;
 }
 
-/* CRT screen effect overlay */
+/* CRT screen effect overlay*/
 body::before {
   content: "";
   position: fixed;
@@ -36,7 +36,7 @@ body::before {
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: overlay;
-}
+} 
 
 /* Header styles with background image */
 header {
