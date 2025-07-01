@@ -53,8 +53,8 @@ body {
 }
 
 /* Default link styling */
-a { 
-    color: azure;
+a {
+    color: #222831;
     font-family: var(--font-primary);
     font-weight: var(--weight-bold);
     line-height: var(--line-height-tight);
@@ -64,7 +64,7 @@ a {
 
 /* Link hover effects */
 a:hover {
-    color: rgb(167, 39, 39);
+    color: #00ADB5;
     transition: color 0.3s ease;
 }
 
@@ -84,9 +84,10 @@ a:hover {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 6s steps(100, end) forwards;
+    padding: 40px;
+    animation: typing 4s steps(150, end) forwards;
     animation-delay: 0s;
-    color:azure;
+    color:#222831;
 }
 
 /* Subheading defaults */
@@ -101,23 +102,16 @@ h2, h3 {
 /* Secondary heading */
 h2 {
     font-size: var(--font-size-2xl);
-    color: rgb(167, 39, 39);
+    color: #393E46;
 }
-
 /* Tertiary heading */
 h3 {
     font-size: var(--font-size-xl);
-    color:rgb(80, 80, 80);
+    color:#393E46;
 }
 
 /* Accent word styling */
 #accent-word {
-    color: rgb(167, 39, 39);
+    color: #00ADB5;
     display: inline-block;
-}
-
-/* CRT control labels */
-.crt-controls label {
-    font-family: var(--font-primary);
-    color: rgb(167,39, 39);
 }
