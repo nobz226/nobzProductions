@@ -64,7 +64,7 @@ a {
 
 /* Link hover effects */
 a:hover {
-    color: #00ADB5;
+    color: azure;
     transition: color 0.3s ease;
 }
 
