@@ -53,19 +53,25 @@ body {
 }
 
 /* Default link styling */
-a {
+a { 
     color: #222831;
     font-family: var(--font-primary);
     font-weight: var(--weight-bold);
     line-height: var(--line-height-tight);
     font-size: var(--font-size-lg);
+    margin-top: 0;
+    margin-bottom: 0.5em;
     text-decoration: none;
+    padding: 5px;
 }
 
 /* Link hover effects */
-a:hover {
-    color: azure;
-    transition: color 0.3s ease;
+li a:hover {
+  background-color: #222831;
+  color: #00ADB5;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 /* Typing animation for headings */
@@ -75,7 +81,7 @@ a:hover {
 }
 
 /* Main heading with typing animation */
-.pageTitle {
+h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
     letter-spacing: var(--letter-spacing-tight);
@@ -84,8 +90,7 @@ a:hover {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    padding: 40px;
-    animation: typing 4s steps(150, end) forwards;
+    animation: typing 3s steps(150, end) forwards;
     animation-delay: 0s;
     color:#222831;
 }
@@ -104,10 +109,11 @@ h2 {
     font-size: var(--font-size-2xl);
     color: #393E46;
 }
+
 /* Tertiary heading */
 h3 {
     font-size: var(--font-size-xl);
-    color:#393E46;
+    color: #393E46;
 }
 
 /* Accent word styling */

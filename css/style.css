@@ -1,57 +1,40 @@
 /* Global body styles and background gradient */
 body {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 1fr auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   overflow-x: hidden;
   overscroll-behavior: none;
-  background:rgb(238, 238, 238);
   min-height: 100vh;
+  color: #222831;
   margin: 0;
-  color:#222831;
+  background:rgb(238, 238, 238);
 }
 
+/* Header styles with background image */
 header {
-  max-height: 150px;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  padding: 20px;
+  max-height: 100px;
   display: flex;
-  align-items: center; 
-  justify-content: space-between;
+  flex-direction: row;      /* Change from column to row */
+  align-items: center;      /* Vertically center items */
+  justify-content: left; /* Optional: space out title and nav */
   position: relative;
   width: 100%;
   z-index: 3;
 }
 
-.header-inner {
+/* Footer styles */
+footer {
+  background-color: #EEEEEE;
+  padding: 30px 20px;
+  min-height: 50px;
   display: flex;
-  align-items: center;  /* Vertically center title and nav */
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
+  margin-top: 10px;
 }
 
-/* Disable hover effects for title elements */
-#mainTitle:hover, #photoTitle:hover, 
-#designTitle:hover, #beatsTitle:hover, 
-#albumTitle:hover, #aboutTitle:hover {
-  color: inherit;
-  transition: none;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 /* Navigation list items */
 li {
   display: inline-block;
-  padding: 5px;
   margin-right: 20px;
   padding-top: 15px;
   animation: fadeInRight 3s ease forwards;
@@ -70,49 +53,81 @@ li:nth-of-type(8) { animation-delay: 2.6s; }
 
 /* Main content container */
 main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  grid-column: 2 / 12;
-  grid-row: 2 / 3;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin: 0;
+  padding-top: 100px;
 }
 
-.introCard {
-  margin: 3rem 0 0 0; /* 2.5rem space above, adjust as needed */
-  margin-bottom: 4rem;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* introContent (1fr), introImage (2fr) */
-  align-items: stretch;
-  grid-column: 1 / -1; 
-  background: none;
+section {
+  border-bottom: 1px solid #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 30rem;         
+  box-shadow: none;
+  gap: 50px;
+}
+
+/* Button link styles */
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #222831;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+  width: 250px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Button hover effects */
+.button-link:hover {
+  background-color: #333;
+  color: #00ADB5;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#intro {
   border: none;
   box-shadow: none;
-  column-gap: 2rem; /* Match the main grid gap */
+  display: flex;
+  flex-direction: row;
+  width: 80%;           /* or 100% if you want full width */
+  min-height: 400px;
+  box-shadow: none;
+  margin: 10px auto;
+  margin-bottom: 70px;    /* center the section */
+  padding: 0;
 }
 
 .introContent {
-  grid-column: 1 / 2;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 70px;
   animation: fadeInLeft 3s ease forwards;
 }
 
 .introImage {
-  grid-column: 2 / 3;
-  display: flex;
+  position: relative;
+  display: inline-block; /* shrink-wrap to image */
+  flex: 1.2;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  height: auto; /* let it fit the image */
+  width: auto;  /* let it fit the image */
   animation: fadeInRight 3s ease forwards;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 .introImage img {
@@ -139,108 +154,92 @@ main {
   pointer-events: none;
 }
 
-.card {
-  max-height: 35rem;
-  position: relative;
+.sectionImage {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  flex: 1; 
-  border: 1px solid #222831;
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 2px 10px #222831;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation-delay: 1s;
   opacity: 0;
-  animation: fadeInUp 3s ease forwards;
-  overflow: hidden;
 }
 
-.card:nth-of-type(2) { animation-delay: 2s; }
-.card:nth-of-type(3) { animation-delay: 2.6s; }
-.card:nth-of-type(4) { animation-delay: 2.8s; }
-.card:nth-of-type(5) { animation-delay: 3.0s; }
-.card:nth-of-type(6) { animation-delay: 3.4s; }
-.card:nth-of-type(7) { animation-delay: 3.8s; }
-
-.card img {
+.sectionImage img {
   width: 100%;
-  top: 0;
-  height: 300px;
+  height: auto;
+  max-height: 300px;
+  max-width: 450px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #222831;
   display: block;
 }
 
-.cardTitle {
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-}
-
-.cardContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  width: 80%;
-}
-
-.cardDescription {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  text-align: left;
-  margin-top: 0;
-}
-
-/* Button link styles */
-.button-link {
-  padding: 10px;
-  background-color: transparent;
-  border: 2px solid #222831;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: auto auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* Button hover effects */
-.button-link:hover {
-  background-color: #222831;
-  color: #00ADB5;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.form {
-  border: 1px solid #222831;
-  border-radius: 10px;
+#beats .sectionContent, #webDesign .sectionContent,
+#photo .sectionContent, #about .sectionContent {
+  flex: 1;
   padding: 30px;
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin:10px;
-  opacity: 0;
-  animation: fadeInUp 3s ease forwards;
-  animation-delay: 2.2s;
+  animation: fadeInRight 3s ease forwards;
 }
 
-/* Footer styles */
-footer {
-  background-color: #EEEEEE;
-  padding: 30px 20px;
-  margin-top: 10px;
-  min-height: 50px;
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+#albums .sectionContent, 
+#design .sectionContent, #blog .sectionContent {
+  flex: 1;
+  padding: 30px;
+  animation: fadeInLeft 3s ease forwards;
+}
+
+#beats .sectionImage, #webDesign .sectionImage,
+#photo .sectionImage, #about .sectionImage {
+  flex: 1;
+  padding: 30px;
+  animation: fadeInLeft 3s ease forwards;
+}
+
+#albums .sectionImage,
+#design .sectionImage, #blog .sectionImage {
+  flex: 1;
+  padding:30px;
+  animation: fadeInRight 3s ease forwards;
+}
+
+#beats {
+  border-top: 1px solid #222831;
+  flex-direction: row-reverse;
+}
+
+#albums {
+  flex-direction: row;
+}
+
+#photo {
+  flex-direction: row-reverse;
+}
+
+#design {
+  flex-direction: row;
+}
+
+#webDesign {
+  flex-direction: row-reverse;
+}
+
+#blog {
+  flex-direction: row;
+}
+
+#about {
+  flex-direction: row-reverse;
+}
+
+
+
+/* Disable hover effects for title elements */
+#mainTitle:hover, #photoTitle:hover, 
+#designTitle:hover, #beatsTitle:hover, 
+#albumTitle:hover, #aboutTitle:hover {
+  color: inherit;
+  transition: none; 
 }
 
 /* Playlist container styles */
@@ -248,17 +247,12 @@ footer {
   position: relative;
   max-width: 100%;
   width: 80%;
-  border: 1px solid #222831;
+  border: 1px solid #333;
   border-radius: 10px;
   padding: 30px;
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0);
-}
-
-/* Remove borders and shadows for intro sections */
-#intro, #beatsIntro, #photoIntro, #designIntro, #albumsIntro {
-  border: none;
-  box-shadow: none;
+  
 }
 
 /* Gallery container styles */
@@ -272,6 +266,7 @@ footer {
   margin-top: 10px;
   background-color: rgba(0, 0, 0, 0);
   z-index: 2;
+  
 }
 
 /* Animation keyframes */
@@ -307,10 +302,3 @@ footer {
     transform: translateX(0);
   }
 }
-
-
-
-
-
-
-
